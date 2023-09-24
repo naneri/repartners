@@ -18,7 +18,7 @@ func (h *PackHandler) Calculate(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, "wrong method", http.StatusMethodNotAllowed)
 		return
 	}
-	value := r.FormValue("pack_size")
+	value := r.FormValue("size")
 
 	i, err := strconv.Atoi(value)
 
